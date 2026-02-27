@@ -1,69 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <title>Elk-Studio</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            background-color: #111;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELK STUDIO | Video & Social Marketing</title>
 
-        header {
-            padding: 40px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-        h1 {
-            color: orange;
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', sans-serif;}
 
-        .section {
-            padding: 30px;
-        }
+body{background:#000;color:white;line-height:1.6;}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            margin: 10px;
-            background-color: orange;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
+section{padding:80px 20px;max-width:1100px;margin:auto;}
 
-        footer {
-            padding: 20px;
-            background-color: #000;
-            font-size: 14px;
-        }
-    </style>
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle at top,#111 0%,#000 70%);
+}
+
+.logo{
+width:260px;
+margin-bottom:40px;
+animation:fadeIn 1.5s ease forwards;
+opacity:0;
+}
+
+@keyframes fadeIn{to{opacity:1;}}
+
+.hero p{
+font-size:20px;
+color:#ccc;
+max-width:600px;
+margin-bottom:40px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#f5a623;
+color:black;
+font-weight:600;
+text-decoration:none;
+border-radius:5px;
+transition:0.3s;
+margin:10px;
+}
+
+.btn:hover{background:white;}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:10px;
+transition:0.3s;
+border:1px solid #1f1f1f;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#f5a623;
+}
+
+.card h3{margin-bottom:15px;color:#f5a623;}
+
+.cta{
+text-align:center;
+background:#111;
+border-radius:10px;
+padding:60px 20px;
+margin-top:80px;
+border:1px solid #1f1f1f;
+}
+
+.cta h2{margin-bottom:20px;color:#f5a623;}
+
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+color:#777;
+font-size:14px;
+border-top:1px solid #111;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>ELK-STUDIO</h1>
-    <p>Video marketing per attività locali</p>
-    <p>Verona e provincia</p>
-</header>
+<section class="hero">
 
-<div class="section">
-    <h2>Cosa facciamo</h2>
-    <p>Creiamo video che trasformano visualizzazioni in clienti.</p>
-    <p>Pacchetto 8 video al mese + gestione profilo.</p>
+<img src="logo.png" class="logo" alt="ELK STUDIO Logo">
+
+<p>
+Trasformiamo visualizzazioni in clienti.<br>
+Video & Social Marketing strategico per attività locali a Verona.
+</p>
+
+<a href="https://wa.me/393425768672" class="btn" target="_blank">Contattaci su WhatsApp</a>
+<a href="mailto:elkhoudmi_media@hotmail.com" class="btn">Invia Email</a>
+
+</section>
+
+<section>
+
+<h2 style="text-align:center;color:#f5a623;font-size:32px;">I Nostri Servizi</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Produzione Video</h3>
+<p>Video professionali ottimizzati per attirare clienti reali e aumentare le richieste.</p>
 </div>
 
-<div class="section">
-    <h2>Contattaci</h2>
-    <a class="btn" href="https://wa.me/393425768672">Scrivici su WhatsApp</a>
-    <a class="btn" href="elkhoudmi_media@hotmail.com">Invia Email</a>
+<div class="card">
+<h3>Gestione Social</h3>
+<p>Creazione e pubblicazione contenuti strategici con piano mensile.</p>
 </div>
+
+<div class="card">
+<h3>Strategia Locale</h3>
+<p>Posizionamento mirato per dominare il mercato della tua zona.</p>
+</div>
+
+</div>
+
+<div class="cta">
+<h2>Vuoi più clienti per la tua attività?</h2>
+<p style="margin-bottom:30px;">Parliamo della tua situazione e costruiamo un piano su misura.</p>
+<a href="https://wa.me/393425768672" class="btn" target="_blank">Richiedi una Consulenza</a>
+</div>
+
+</section>
 
 <footer>
-    © 2026 Elk-Studio - Verona
+© 2026 ELK STUDIO | Verona
 </footer>
 
 </body>
