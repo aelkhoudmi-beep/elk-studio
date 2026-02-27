@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELK-STUDIO | Video Marketing Verona</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0f0f0f;color:white;scroll-behavior:smooth;}
+section{padding:100px 8%;}
+.gold{color:#d4af37;}
+
+/* NAV */
+nav{
+position:fixed;width:100%;top:0;
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 8%;background:rgba(15,15,15,0.9);
+backdrop-filter:blur(8px);z-index:1000;
+}
+nav .logo{
+display:flex;
+align-items:center;
+}
+nav .logo img{
+height:45px;
+width:auto;
+}
+nav ul{display:flex;gap:30px;list-style:none;}
+nav a{text-decoration:none;color:white;transition:0.3s;}
+nav a:hover{color:#d4af37;}
+
+/* HERO */
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;}
+.hero h1{font-size:60px;max-width:900px;margin-bottom:20px;}
+.hero p{color:#ccc;margin-bottom:30px;}
+.btn{
+padding:15px 35px;background:#d4af37;color:black;
+border-radius:30px;text-decoration:none;font-weight:600;
+transition:0.3s;display:inline-block;
+}
+.btn:hover{background:white;}
+
+/* SERVICES */
+.services{background:#111;text-align:center;}
+.service-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:50px;}
+.card{
+background:#1a1a1a;padding:40px;width:280px;border-radius:15px;
+transition:0.4s;cursor:pointer;border:1px solid transparent;
+}
+.card:hover{transform:translateY(-10px);border:1px solid #d4af37;}
+
+/* PORTFOLIO */
+.portfolio{text-align:center;}
+.filter-buttons{margin-bottom:40px;}
+.filter-buttons button{
+padding:10px 20px;margin:5px;border:none;
+background:#1a1a1a;color:white;cursor:pointer;border-radius:20px;
+}
+.filter-buttons button.active,
+.filter-buttons button:hover{background:#d4af37;color:black;}
+.portfolio-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+.portfolio-item{
+width:250px;height:180px;background:#1a1a1a;
+display:flex;align-items:center;justify-content:center;
+border-radius:10px;transition:0.3s;
+}
+.portfolio-item:hover{transform:scale(1.05);}
+
+/* PRICING */
+.pricing{background:#111;text-align:center;}
+.pricing-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:40px;}
+.price-card{
+background:#1a1a1a;padding:40px;width:280px;border-radius:15px;
+border:1px solid transparent;transition:0.4s;
+}
+.price-card:hover{border:1px solid #d4af37;transform:translateY(-10px);}
+.price{font-size:35px;color:#d4af37;margin:20px 0;}
+
+/* FAQ */
+.faq{text-align:center;}
+.faq-item{max-width:700px;margin:20px auto;text-align:left;}
+.faq-question{
+background:#1a1a1a;padding:15px;border-radius:10px;
+cursor:pointer;
+}
+.faq-answer{
+display:none;padding:15px;color:#ccc;
+}
+
+/* FOOTER */
+footer{
+background:#0a0a0a;text-align:center;padding:40px 8%;
+color:#aaa;font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.hero h1{font-size:38px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">
+<img src="logo.png.png" alt="ELK-STUDIO Logo">
+</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Servizi</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#pricing">Prezzi</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<h1>La nuova piattaforma di <span class="gold">Video Marketing</span> per attività locali</h1>
+<p>Aiutiamo le aziende di Verona ad attirare nuovi clienti tramite video strategici e gestione social.</p>
+<a class="btn" href="https://wa.me/393425768672?text=Ciao%20ELK-STUDIO,%20vorrei%20ricevere%20informazioni%20sui%20vostri%20servizi." target="_blank">
+Prenota su WhatsApp
+</a>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+<h2>I nostri <span class="gold">Servizi</span></h2>
+<div class="service-grid">
+<div class="card">Produzione Video Professionali</div>
+<div class="card">Gestione Completa Social</div>
+<div class="card">Strategia di Crescita Locale</div>
+<div class="card">Reel & TikTok Ads</div>
+<div class="card">Ottimizzazione Profilo</div>
+<div class="card">Consulenza Marketing</div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+<h2>Portfolio</h2>
+
+<div class="filter-buttons">
+<button class="active" onclick="filterSelection('all')">Tutti</button>
+<button onclick="filterSelection('video')">Video</button>
+<button onclick="filterSelection('social')">Social</button>
+</div>
+
+<div class="portfolio-grid">
+<div class="portfolio-item video">Video 1</div>
+<div class="portfolio-item video">Video 2</div>
+<div class="portfolio-item social">Social 1</div>
+<div class="portfolio-item social">Social 2</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+<h2>Piani <span class="gold">Tariffari</span></h2>
+<div class="pricing-grid">
+<div class="price-card">
+<h3>Base</h3>
+<div class="price">€399</div>
+<p>8 video al mese + gestione profilo</p>
+</div>
+
+<div class="price-card">
+<h3>Pro</h3>
+<div class="price">€699</div>
+<p>12 video + strategia avanzata</p>
+</div>
+
+<div class="price-card">
+<h3>Premium</h3>
+<div class="price">€999</div>
+<p>Video illimitati + Ads + gestione completa</p>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+<h2>Domande Frequenti</h2>
+
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">Quanto dura il contratto?</div>
+<div class="faq-answer">Collaboriamo con abbonamento mensile senza vincoli lunghi.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">In che zona operate?</div>
+<div class="faq-answer">Operiamo a Verona e provincia.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">Quando vedrò risultati?</div>
+<div class="faq-answer">I primi risultati arrivano già dal primo mese se la strategia è applicata correttamente.</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 ELK-STUDIO | Verona | elkhoudmi_media@hotmail.com | 3425768672
+</footer>
+
+<script>
+function toggleFAQ(element){
+let answer = element.nextElementSibling;
+answer.style.display = answer.style.display === "block" ? "none" : "block";
+}
+
+function filterSelection(category){
+let items = document.getElementsByClassName("portfolio-item");
+for(let i=0;i<items.length;i++){
+if(category==="all"){items[i].style.display="flex";}
+else{
+items[i].style.display = items[i].classList.contains(category) ? "flex" : "none";
+}
+}
+}
+</script>
+
+</body>
+</html>
