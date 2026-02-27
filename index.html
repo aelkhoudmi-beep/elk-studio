@@ -39,8 +39,14 @@ transform:translateX(-50%);
 }
 
 .center-logo img{
-height:45px;
+height:65px;            /* più grande */
 width:auto;
+filter: drop-shadow(0 0 10px rgba(212,175,55,0.6));  /* effetto luce oro */
+transition:0.3s;
+}
+
+.center-logo img:hover{
+transform:scale(1.08);  /* leggero ingrandimento al passaggio */
 }
 
 nav ul{
@@ -403,3 +409,4 @@ items[i].style.display = items[i].classList.contains(category) ? "flex" : "none"
 
 </body>
 </html>
+
