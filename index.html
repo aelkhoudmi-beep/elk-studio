@@ -3,216 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ELK-STUDIO | Video & Social Marketing Verona</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>ELK-STUDIO | Video Marketing Verona</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-body {
-  background-color: #0f0f0f;
-  color: white;
-  line-height: 1.6;
+body{
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
 }
 
-section {
-  padding: 100px 10%;
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15,15,15,0.85);
+    backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
-h1,h2,h3 {
-  margin-bottom: 20px;
+.logo{
+    font-weight:700;
+    font-size:22px;
+    color:#d4af37;
 }
 
-p {
-  opacity: 0.85;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
 }
 
-.navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: #0f0f0f;
-  padding: 20px 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  border-bottom: 1px solid #1a1a1a;
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:400;
+    transition:0.3s;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 14px;
+nav ul li a:hover{
+    color:#d4af37;
 }
 
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  margin-top: 20px;
-  background: #f5a623;
-  color: black;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
 }
 
-.btn:hover {
-  background: #ffbf47;
+.hero-text{
+    max-width:600px;
+    animation:fadeIn 1.5s ease forwards;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
+.hero h1{
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
-.hero-content {
-  max-width: 700px;
+.gold{
+    color:#d4af37;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
+.hero p{
+    color:#ccc;
+    margin-bottom:30px;
+    font-size:18px;
 }
 
-.card {
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 8px;
-  transition: 0.3s;
+.btn{
+    padding:15px 30px;
+    background:#d4af37;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.btn:hover{
+    background:white;
 }
 
-footer {
-  background: #111;
-  padding: 40px 10%;
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.6;
+.hero-img{
+    animation:float 4s ease-in-out infinite;
+}
+
+.hero-img img{
+    width:500px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-20px);}
+    100%{transform:translateY(0px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        margin-top:100px;
+    }
+    .hero-img img{
+        width:300px;
+        margin-top:40px;
+    }
+    .hero h1{
+        font-size:40px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="navbar">
-  <div><strong>ELK-STUDIO</strong></div>
-  <div>
-    <a href="#servizi">Servizi</a>
-    <a href="#metodo">Metodo</a>
-    <a href="#prezzi">Pacchetti</a>
-    <a href="#contatti">Contatti</a>
-  </div>
-</div>
+<nav>
+    <div class="logo">ELK-STUDIO</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Servizi</a></li>
+        <li><a href="#">Chi siamo</a></li>
+        <li><a href="#">Contatti</a></li>
+    </ul>
+</nav>
 
 <section class="hero">
-  <div class="hero-content">
-    <h1>Trasformiamo visualizzazioni in clienti reali.</h1>
-    <p>Video strategici e gestione social per attività locali a Verona.</p>
+    <div class="hero-text">
+        <h1>La nuova piattaforma di <span class="gold">Video Marketing</span> per attività locali</h1>
+        <p>Aiutiamo le aziende di Verona ad attirare nuovi clienti attraverso video strategici e gestione professionale dei social.</p>
+        
+        <a class="btn" href="https://wa.me/393425768672?text=Ciao%20ELK-STUDIO%2C%20vorrei%20prenotare%20una%20consulenza%20gratuita%20per%20il%20mio%20business." target="_blank">
+            Prenota su WhatsApp
+        </a>
+    </div>
 
-    <a href="https://wa.me/393425768672" class="btn">
-      Scrivici su WhatsApp
-    </a>
-  </div>
+    <div class="hero-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Video Marketing">
+    </div>
 </section>
-
-<section id="servizi">
-  <h2>I Nostri Servizi</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Produzione Video</h3>
-      <p>Video professionali ottimizzati per attirare clienti reali nella tua attività.</p>
-    </div>
-    <div class="card">
-      <h3>Gestione Social</h3>
-      <p>Pubblicazione strategica, crescita profilo e contenuti orientati ai risultati.</p>
-    </div>
-    <div class="card">
-      <h3>Strategia Marketing</h3>
-      <p>Piano personalizzato per aumentare prenotazioni e vendite.</p>
-    </div>
-  </div>
-</section>
-
-<section id="metodo">
-  <h2>Il Nostro Metodo</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>1. Analisi</h3>
-      <p>Studiamo il tuo mercato locale e i competitor.</p>
-    </div>
-    <div class="card">
-      <h3>2. Strategia</h3>
-      <p>Creiamo un piano contenuti orientato alle conversioni.</p>
-    </div>
-    <div class="card">
-      <h3>3. Produzione</h3>
-      <p>Realizziamo video professionali ottimizzati per i social.</p>
-    </div>
-    <div class="card">
-      <h3>4. Ottimizzazione</h3>
-      <p>Miglioriamo costantemente risultati e performance.</p>
-    </div>
-  </div>
-</section>
-
-<section id="prezzi">
-  <h2>I Nostri Pacchetti</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Start</h3>
-      <p>8 video al mese + gestione profilo</p>
-      <h2>Prezzo su richiesta</h2>
-    </div>
-    <div class="card">
-      <h3>Growth</h3>
-      <p>12 video + strategia avanzata</p>
-      <h2>Prezzo su richiesta</h2>
-    </div>
-    <div class="card">
-      <h3>Premium</h3>
-      <p>Video + Ads + Funnel completo</p>
-      <h2>Prezzo personalizzato</h2>
-    </div>
-  </div>
-</section>
-
-<section id="contatti">
-  <h2>Prenota una Consulenza</h2>
-  <p>Parliamo del tuo business e costruiamo un piano personalizzato.</p>
-
-  <a href="https://wa.me/393425768672" class="btn">
-    Prenota ora su WhatsApp
-  </a>
-
-  <p style="margin-top:30px;">
-    Email: 
-    <a href="mailto:elkhoudmi_media@hotmail.com" style="color:#f5a623;">
-    elkhoudmi_media@hotmail.com</a>
-  </p>
-
-  <p style="margin-top:10px;">
-    Telefono: 
-    <a href="tel:+393425768672" style="color:#f5a623;">
-    342 576 8672</a>
-  </p>
-</section>
-
-<footer>
-  © 2026 ELK-STUDIO | Video & Social Marketing Verona
-</footer>
 
 </body>
 </html>
